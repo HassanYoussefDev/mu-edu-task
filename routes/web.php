@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'ProfileController@edit')->name('profile');
+Route::put('/profile_update/{id?}', 'ProfileController@update')->name('profile_update');
+
+Route::group(['prefix' => '/' ,'middleware' => ['auth','gender']], function(){
+	Route::get('/home', 'HomeController@index')->name('home');
+	
+	
+});
