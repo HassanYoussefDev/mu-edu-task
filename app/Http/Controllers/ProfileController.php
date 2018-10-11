@@ -15,7 +15,6 @@ class ProfileController extends Controller
     }
 /**
      * Get a validator for an incoming registration request.
-     *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
