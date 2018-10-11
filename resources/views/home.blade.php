@@ -1,23 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+
+    <div class="container">
+        @foreach($posts as $post)
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                {{--
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                --}}
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                    <div class="row">
+                        <div class="col-sm">
+                            <h3 class="card-title">{{$post->title}}</h3>
                         </div>
-                    @endif
+                        <div class="col-sm">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"> By : {{$post->name}}</li>
+                                <li class="list-inline-item">| Gender : {{$post->gender}}</li>
+                                <li class="list-inline-item">| Posted on : {{$post->created_at}}</li>
 
-                    You are logged in!
+                            </ul>
+                        </div>
+
+                    </div>
+                    <p class="card-text">{{$post->body}}</p>
+                    <a href="#" class="btn btn-primary">Read more</a>
                 </div>
-            </div>
-        </div>
+            </div><br>
+        @endforeach
     </div>
-</div>
 @endsection

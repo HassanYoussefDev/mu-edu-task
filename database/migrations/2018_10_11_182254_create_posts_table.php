@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddGenderToUsers extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddGenderToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function($table) {
-            $table->string('gender')->default(null);
+        Schema::create('posts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->text('body');
+            $table->integer('user_id');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class AddGenderToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table) {
-            $table->dropColumn('gender');
-        });
+        Schema::dropIfExists('posts');
     }
 }

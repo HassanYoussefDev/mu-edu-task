@@ -23,6 +23,8 @@ Route::put('/profile_update/{id?}', 'ProfileController@update')->name('profile_u
 
 Route::group(['prefix' => '/' ,'middleware' => ['auth','gender']], function(){
 	Route::get('/home', 'HomeController@index')->name('home');
-	
-	
+	Route::get('/posts/create', 'PostController@create')->name('posts_create');
+    Route::post('/posts/store', 'PostController@store')->name('posts_store');
+
+
 });
