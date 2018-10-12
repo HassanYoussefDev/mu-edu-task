@@ -21,3 +21,5 @@ add mysql connection info in .env file
 php artisan key:generate
 
 php artisan migrate
+
+you need to add facebook (app id and secerect) for facebook login to work
