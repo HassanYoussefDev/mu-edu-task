@@ -10,6 +10,8 @@ setup notes :
 
 git clone https://github.com/HassanYoussefDev/mu-edu-task.git
 
+cd mu-edu-task
+
 composer install
 
 change  .env.example to .env
