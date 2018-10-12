@@ -12,9 +12,9 @@ git clone https://github.com/HassanYoussefDev/mu-edu-task.git
 
 change  .env.example to .env
 
-add mysql connection info in .env file
-
 composer install
+
+add mysql connection info in .env file
 
 php artisan key:generate
 
