@@ -32,3 +32,12 @@ Route::group(['prefix' => '/' ,'middleware' => ['auth','gender']], function(){
 
 
 });
+
+Route::get('facebook', function () {
+    return view('facebook');
+});
+Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
+Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');

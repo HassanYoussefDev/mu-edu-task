@@ -62,6 +62,14 @@
                                 </a>
                             </div>
                         </div>
+                    <br>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary btn-block">
+                                    <strong>Login With Facebook</strong>
+                                </a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
