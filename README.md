@@ -8,8 +8,12 @@ this message appears when i am logining by facebook
 
 setup notes :
 
-git clone https://github.com/HassanYoussefDev/mu-edu-task.git  -
-change  .env.example to .env    -
-composer install    -
-key:generate  -
-php artisan migrate    -
+git clone https://github.com/HassanYoussefDev/mu-edu-task.git
+
+change  .env.example to .env
+
+composer install
+
+key:generate
+
+php artisan migrate
