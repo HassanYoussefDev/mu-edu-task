@@ -22,4 +22,4 @@ php artisan key:generate
 
 php artisan migrate
 
-you need to add facebook (app id and secerect) for facebook login to work
+you need to add facebook (app id and secerect) in .env file for facebook login to work
