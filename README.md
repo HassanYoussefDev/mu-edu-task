@@ -10,9 +10,9 @@ setup notes :
 
 git clone https://github.com/HassanYoussefDev/mu-edu-task.git
 
-change  .env.example to .env
-
 composer install
+
+change  .env.example to .env
 
 add mysql connection info in .env file
 
