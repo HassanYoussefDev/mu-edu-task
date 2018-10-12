@@ -16,6 +16,6 @@ add mysql connection info in .env file
 
 composer install
 
-key:generate
+php artisan key:generate
 
 php artisan migrate
